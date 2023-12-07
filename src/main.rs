@@ -42,16 +42,14 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let pressure: &f64 = json_response.getPressure();
     let humidity: &f64 = json_response.getHumidity();
 
-
     // for formatting for txt being printed
     let width: usize = 8;
-
 
     if(main == "Thunderstorm") {
     // print thunderstorm art
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -61,8 +59,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     } else if(main == "Drizzle") {
     // print drizzle art
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -72,8 +70,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     } else if(main == "Rain") {
     // print rain art
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -83,8 +81,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     } else if(main == "Snow") {
     // print snow art
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -94,8 +92,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     } else if(main == "Fog") {
     // print fog art
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -105,8 +103,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     } else if(main == "Mist") {
     // print mist art
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -116,8 +114,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     } else if(main == "Clear") {
     // print clear art
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -126,9 +124,9 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     } else if(main == "Clouds") {
     // print clouds art
-    println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("{art}\n", art=utility::weather::Clouds());
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
@@ -138,8 +136,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     } else {
     // all other cases print no ascii art, simply output the  weather information
     println!("{art}", art=utility::weather::Clouds());
-    println!("Todays Weather: {main}",main=main);
-    println!("City: {city:>16}\nTemperature: {temp:>9.2}\nFeels Like: {fl:>10.2}\nPressure: {pressure:>12}\nHumidity: {humidity:>12}",
+    println!("Todays Weather:   {main}", main=main);
+    println!("City: {city:>18}\nTemperature: {temp:>9.2}°C\nFeels Like: {fl:>10.2}°C\nPressure: {pressure:>11}hPa\nHumidity: {humidity:>13}%",
              city=city_name,
              temp=temp,
              fl=feels_like,
